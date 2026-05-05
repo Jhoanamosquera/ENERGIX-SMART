@@ -1,0 +1,58 @@
+/* ============================================ */
+/* VARIABLES Y RESET */
+/* ============================================ */
+:root {
+    --bg-primary: #0B1928;
+    --bg-sidebar: #112233;
+    --bg-card: #152535;
+    --accent-primary: #00C853;
+    --accent-secondary: #00BFA5;
+    --alert-critical: #FF1744;
+    --alert-warning: #FF9100;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0BEC5;
+    --border-color: #1E3A4A;
+    --hover-sidebar: #1A3344;
+    --admin-badge: #FFD600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-sidebar);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
