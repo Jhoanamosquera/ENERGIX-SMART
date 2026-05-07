@@ -1,0 +1,427 @@
+/* ============================================ */
+/* VECINOS/COMUNIDAD VIEW - RESPONSIVE         */
+/* ============================================ */
+
+/* Page actions */
+.page-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Insights Dashboard */
+.insights-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.insight-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.insight-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.insight-card.success .insight-icon {
+    background: rgba(0, 200, 83, 0.1);
+    color: var(--accent-primary);
+}
+
+.insight-card.warning .insight-icon {
+    background: rgba(255, 145, 0, 0.1);
+    color: var(--alert-warning);
+}
+
+.insight-card.info .insight-icon {
+    background: rgba(0, 191, 165, 0.1);
+    color: var(--accent-secondary);
+}
+
+.insight-content {
+    flex: 1;
+}
+
+.insight-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.insight-content p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.insight-action {
+    flex-shrink: 0;
+}
+
+.btn-insight {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-insight:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+}
+
+/* Comparison Grid */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.comparison-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+}
+
+.comparison-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.comparison-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.comparison-icon.user {
+    background: rgba(0, 200, 83, 0.1);
+    color: var(--accent-primary);
+}
+
+.comparison-icon.community {
+    background: rgba(0, 191, 165, 0.1);
+    color: var(--accent-secondary);
+}
+
+.comparison-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.comparison-value {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.comparison-value.primary {
+    color: var(--accent-primary);
+}
+
+.comparison-value.info {
+    color: var(--accent-secondary);
+}
+
+.value-unit {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-left: 4px;
+}
+
+.comparison-cost {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.cost-amount {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.comparison-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-badge {
+    background: rgba(0, 200, 83, 0.1);
+    color: var(--accent-primary);
+}
+
+.community-badge {
+    background: rgba(0, 191, 165, 0.1);
+    color: var(--accent-secondary);
+}
+
+/* ============================================ */
+/* TABLET - 768px                              */
+/* ============================================ */
+@media (max-width: 768px) {
+    .page-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .page-actions button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .insights-dashboard {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .insight-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .insight-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .insight-content h3 {
+        font-size: 14px;
+    }
+    
+    .insight-content p {
+        font-size: 12px;
+    }
+    
+    .btn-insight {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .comparison-card {
+        padding: 20px;
+    }
+    
+    .comparison-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+    
+    .comparison-value {
+        font-size: 32px;
+    }
+}
+
+/* ============================================ */
+/* MOBILE - 480px                              */
+/* ============================================ */
+@media (max-width: 480px) {
+    .insight-card {
+        padding: 14px;
+        gap: 10px;
+    }
+    
+    .insight-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+    
+    .insight-content h3 {
+        font-size: 13px;
+    }
+    
+    .insight-content p {
+        font-size: 11px;
+    }
+    
+    .btn-insight {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .comparison-card {
+        padding: 16px;
+    }
+    
+    .comparison-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+    
+    .comparison-label {
+        font-size: 13px;
+    }
+    
+    .comparison-value {
+        font-size: 28px;
+    }
+    
+    .value-unit {
+        font-size: 14px;
+    }
+    
+    .comparison-cost {
+        font-size: 13px;
+    }
+    
+    .comparison-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+/* ============================================ */
+/* SMALL MOBILE - 375px                        */
+/* ============================================ */
+@media (max-width: 375px) {
+    .insight-card {
+        padding: 12px;
+    }
+    
+    .comparison-card {
+        padding: 14px;
+    }
+    
+    .comparison-value {
+        font-size: 24px;
+    }
+}
+
+
+/* ============================================ */
+/* OPTIMIZACIÓN PARA iPhone 14 Pro Max        */
+/* 430x932 - ESPECÍFICO                        */
+/* ============================================ */
+@media (min-width: 390px) and (max-width: 430px) {
+    .page-actions {
+        gap: 10px;
+    }
+    
+    .page-actions button {
+        padding: 11px 16px;
+        font-size: 13px;
+    }
+    
+    /* Insights Dashboard */
+    .insights-dashboard {
+        gap: 12px;
+    }
+    
+    .insight-card {
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .insight-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+    
+    .insight-content h3 {
+        font-size: 13px;
+    }
+    
+    .insight-content p {
+        font-size: 12px;
+    }
+    
+    .btn-insight {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+    
+    /* Comparison Grid */
+    .comparison-grid {
+        gap: 14px;
+    }
+    
+    .comparison-card {
+        padding: 18px;
+    }
+    
+    .comparison-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    
+    .comparison-label {
+        font-size: 13px;
+    }
+    
+    .comparison-value {
+        font-size: 30px;
+    }
+    
+    .value-unit {
+        font-size: 15px;
+    }
+    
+    .comparison-cost {
+        font-size: 13px;
+    }
+    
+    .comparison-badge {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+}

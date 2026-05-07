@@ -1,0 +1,385 @@
+/* ============================================ */
+/* ADMIN 430px - ULTRA ESPECÍFICO              */
+/* SOLO para iPhone 14 Pro Max y similares    */
+/* Gestión Usuarios, Dispositivos, Stats      */
+/* ============================================ */
+
+@media (max-width: 430px) {
+    
+    /* ========================================== */
+    /* PAGE HEADER - TODAS LAS VISTAS ADMIN      */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .page-header {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+    
+    body #userPanel #mainContent .page-header h1 {
+        font-size: 19px !important;
+        line-height: 1.3 !important;
+    }
+    
+    body #userPanel #mainContent .page-header p {
+        font-size: 13px !important;
+    }
+    
+    body #userPanel #mainContent .page-header .btn-primary {
+        width: 100% !important;
+        padding: 11px 16px !important;
+        font-size: 13px !important;
+        justify-content: center !important;
+        display: flex !important;
+    }
+    
+    /* ========================================== */
+    /* KPI GRID - 2 COLUMNAS                      */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .kpi-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    
+    body #userPanel #mainContent .kpi-card {
+        padding: 14px !important;
+    }
+    
+    body #userPanel #mainContent .kpi-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+    }
+    
+    body #userPanel #mainContent .kpi-title {
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+    }
+    
+    body #userPanel #mainContent .kpi-icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 14px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    body #userPanel #mainContent .kpi-value {
+        font-size: 22px !important;
+        line-height: 1 !important;
+    }
+    
+    body #userPanel #mainContent .kpi-label {
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* ========================================== */
+    /* CARD                                       */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .card {
+        padding: 14px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    body #userPanel #mainContent .card-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    body #userPanel #mainContent .card-title {
+        font-size: 14px !important;
+    }
+    
+    body #userPanel #mainContent .card-header .btn-primary {
+        width: 100% !important;
+        padding: 10px 14px !important;
+        font-size: 13px !important;
+        justify-content: center !important;
+    }
+    
+    /* ========================================== */
+    /* TABLA - GESTIÓN USUARIOS Y DISPOSITIVOS   */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .table-container {
+        margin: 0 -14px !important;
+        padding: 0 14px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    body #userPanel #mainContent .table-container table {
+        min-width: 620px !important;
+        font-size: 11px !important;
+    }
+    
+    body #userPanel #mainContent .table-container thead tr th {
+        padding: 10px 6px !important;
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+    }
+    
+    body #userPanel #mainContent .table-container tbody tr td {
+        padding: 10px 6px !important;
+        font-size: 11px !important;
+    }
+    
+    /* User Avatar en tabla */
+    body #userPanel #mainContent .table-container .user-avatar,
+    body #userPanel #mainContent .table-container tbody tr td div[style*="width: 40px"][style*="height: 40px"] {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 12px !important;
+    }
+    
+    /* Div con avatar inline */
+    body #userPanel #mainContent .table-container tbody tr td div[style*="display: flex"] {
+        gap: 8px !important;
+        align-items: center !important;
+    }
+    
+    body #userPanel #mainContent .table-container tbody tr td div[style*="display: flex"] strong {
+        font-size: 11px !important;
+    }
+    
+    /* Device icon en tabla - más específico */
+    body #userPanel #mainContent .table-container tbody tr td div[style*="width: 40px"][style*="background"] {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 16px !important;
+        border-radius: 6px !important;
+    }
+    
+    /* Badges */
+    body #userPanel #mainContent .badge {
+        font-size: 9px !important;
+        padding: 3px 7px !important;
+    }
+    
+    /* Botones en tabla con estilos inline */
+    body #userPanel #mainContent .table-container tbody tr td button[style*="padding"] {
+        padding: 6px 9px !important;
+        font-size: 10px !important;
+        margin-right: 3px !important;
+    }
+    
+    body #userPanel #mainContent .table-container tbody tr td span[style*="font-size: 12px"] {
+        font-size: 10px !important;
+    }
+    
+    /* ========================================== */
+    /* GRID-2 - ESTADÍSTICAS GLOBALES            */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .grid-2 {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    
+    /* ========================================== */
+    /* ALERT ITEMS - ESTADÍSTICAS                */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .alert-item,
+    body #userPanel #mainContent .card .alert-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 14px !important;
+        text-align: left !important;
+    }
+    
+    body #userPanel #mainContent .alert-item.warning {
+        flex-direction: row !important;
+    }
+    
+    body #userPanel #mainContent .alert-icon {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 17px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    body #userPanel #mainContent .alert-content {
+        flex: 1 !important;
+        text-align: left !important;
+    }
+    
+    body #userPanel #mainContent .alert-title {
+        font-size: 13px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    body #userPanel #mainContent .alert-description {
+        font-size: 11px !important;
+        line-height: 1.5 !important;
+    }
+    
+    body #userPanel #mainContent .alert-description strong {
+        font-size: 12px !important;
+    }
+    
+    /* ========================================== */
+    /* CHARTS                                     */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .chart-container {
+        height: 240px !important;
+        padding: 12px !important;
+    }
+    
+    body #userPanel #mainContent .chart-container canvas {
+        max-height: 240px !important;
+    }
+    
+    /* ========================================== */
+    /* PADDING EN DIVS CON ESTILOS INLINE        */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .card div[style*="padding: 20px"],
+    body #userPanel #mainContent .card > div[style*="padding"] {
+        padding: 14px !important;
+    }
+    
+    /* ========================================== */
+    /* CHART HEIGHT OVERRIDE                      */
+    /* ========================================== */
+    
+    body #userPanel #mainContent .chart-container[style*="height: 400px"],
+    body #userPanel #mainContent .chart-container[style*="height: 300px"] {
+        height: 240px !important;
+    }
+}
+
+/* ========================================== */
+/* EXACTAMENTE 430px                          */
+/* ========================================== */
+@media (width: 430px) {
+    body #userPanel #mainContent .kpi-grid {
+        gap: 11px !important;
+    }
+    
+    body #userPanel #mainContent .table-container {
+        margin: 0 -13px !important;
+        padding: 0 13px !important;
+    }
+}
+
+/* ========================================== */
+/* ADDITIONAL OVERRIDES - MAXIMUM PRIORITY    */
+/* Para asegurar que funcione en 430px        */
+/* ========================================== */
+@media (max-width: 430px) {
+    /* Forzar tamaño de tabla */
+    #userPanel #mainContent table {
+        min-width: 620px !important;
+        font-size: 11px !important;
+    }
+    
+    #userPanel #mainContent table thead tr th {
+        padding: 10px 6px !important;
+        font-size: 10px !important;
+    }
+    
+    #userPanel #mainContent table tbody tr td {
+        padding: 10px 6px !important;
+        font-size: 11px !important;
+    }
+    
+    /* Forzar tamaño de avatares y device icons */
+    #userPanel #mainContent table tbody tr td div[style] {
+        gap: 8px !important;
+    }
+    
+    #userPanel #mainContent table .user-avatar,
+    #userPanel #mainContent table tbody tr td > div > div[style*="width"][style*="height"] {
+        width: 30px !important;
+        height: 30px !important;
+        min-width: 30px !important;
+        min-height: 30px !important;
+    }
+    
+    /* Forzar tamaño de botones en tabla */
+    #userPanel #mainContent table button[style*="padding"] {
+        padding: 6px 9px !important;
+        font-size: 10px !important;
+        margin-right: 3px !important;
+    }
+    
+    /* Forzar badges */
+    #userPanel #mainContent .badge {
+        font-size: 9px !important;
+        padding: 3px 7px !important;
+    }
+    
+    /* Forzar KPI grid a 2 columnas */
+    #userPanel #mainContent .kpi-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    
+    /* Forzar grid-2 a 1 columna */
+    #userPanel #mainContent .grid-2 {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    
+    /* Forzar alert items horizontal */
+    #userPanel #mainContent .alert-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    
+    /* Forzar chart height */
+    #userPanel #mainContent .chart-container {
+        height: 240px !important;
+        max-height: 240px !important;
+    }
+    
+    #userPanel #mainContent .chart-container canvas {
+        max-height: 240px !important;
+    }
+    
+    /* Forzar page header responsive */
+    #userPanel #mainContent .page-header {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+    
+    #userPanel #mainContent .page-header h1 {
+        font-size: 19px !important;
+    }
+    
+    #userPanel #mainContent .page-header .btn-primary {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    /* Forzar card header responsive */
+    #userPanel #mainContent .card-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    
+    #userPanel #mainContent .card-header .btn-primary {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}

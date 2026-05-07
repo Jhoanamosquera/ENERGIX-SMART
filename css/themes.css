@@ -1,0 +1,845 @@
+/* ============================================
+   TEMAS - MODO OSCURO Y CLARO
+   ============================================ */
+
+/* Variables del tema oscuro (por defecto) */
+:root[data-theme="dark"] {
+    /* Colores principales */
+    --bg-primary: #0B1928;
+    --bg-secondary: #132337;
+    --bg-tertiary: #1a2f45;
+    --bg-card: #1a2f45;
+    --bg-hover: #243b54;
+    
+    /* Texto */
+    --text-primary: #E8EDF2;
+    --text-secondary: #B0BEC5;
+    --text-muted: #78909C;
+    
+    /* Bordes */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-hover: rgba(255, 255, 255, 0.2);
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    
+    /* Colores de estado */
+    --primary: #00C853;
+    --primary-dark: #00A843;
+    --primary-light: #00E676;
+    
+    --success: #4CAF50;
+    --success-dark: #388E3C;
+    --warning: #FF9800;
+    --warning-dark: #F57C00;
+    --warning-light: #FFB74D;
+    --danger: #F44336;
+    --danger-dark: #D32F2F;
+    --info: #2196F3;
+    --info-dark: #1976D2;
+    --info-light: #64B5F6;
+    
+    /* Scrollbar */
+    --scrollbar-bg: #1a2f45;
+    --scrollbar-thumb: #3d5a7a;
+    --scrollbar-thumb-hover: #4d6a8a;
+}
+
+/* Variables del tema claro */
+:root[data-theme="light"] {
+    /* Colores principales */
+    --bg-primary: #F5F7FA;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #E8EDF2;
+    --bg-card: #FFFFFF;
+    --bg-hover: #E3F2FD;
+    
+    /* Texto */
+    --text-primary: #1a2f45;
+    --text-secondary: #546E7A;
+    --text-muted: #90A4AE;
+    
+    /* Bordes */
+    --border-color: rgba(0, 0, 0, 0.1);
+    --border-hover: rgba(0, 0, 0, 0.2);
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+    
+    /* Colores de estado */
+    --primary: #00C853;
+    --primary-dark: #00A843;
+    --primary-light: #00E676;
+    
+    --success: #4CAF50;
+    --success-dark: #388E3C;
+    --warning: #FF9800;
+    --warning-dark: #F57C00;
+    --warning-light: #FFB74D;
+    --danger: #F44336;
+    --danger-dark: #D32F2F;
+    --info: #2196F3;
+    --info-dark: #1976D2;
+    --info-light: #64B5F6;
+    
+    /* Scrollbar */
+    --scrollbar-bg: #E8EDF2;
+    --scrollbar-thumb: #B0BEC5;
+    --scrollbar-thumb-hover: #90A4AE;
+}
+
+/* Transiciones suaves al cambiar tema */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ajustes específicos para tema claro */
+[data-theme="light"] .login-background {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+[data-theme="light"] .hero-section {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .kpi-card,
+[data-theme="light"] .stat-card {
+    background: var(--bg-card);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .sidebar {
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .top-bar {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .nav-item:hover {
+    background: var(--bg-hover);
+}
+
+[data-theme="light"] .nav-item.active {
+    background: var(--primary)15;
+    color: var(--primary);
+}
+
+[data-theme="light"] input,
+[data-theme="light"] select,
+[data-theme="light"] textarea {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] select:focus,
+[data-theme="light"] textarea:focus {
+    border-color: var(--primary);
+    background: var(--bg-secondary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary)20;
+}
+
+[data-theme="light"] .form-control {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .form-control:focus {
+    border-color: var(--primary);
+    background: var(--bg-secondary);
+}
+
+[data-theme="light"] .modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .notif-panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .notif-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .notif-item:hover {
+    background: var(--bg-hover);
+}
+
+[data-theme="light"] button:not(.btn-primary):not(.btn-secondary):not(.btn-danger):not(.btn-success) {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .data-table {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .data-table thead {
+    background: var(--bg-tertiary);
+    border-bottom: 2px solid var(--border-color);
+}
+
+[data-theme="light"] .data-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .data-table tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+[data-theme="light"] .alert {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .login-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .input-with-icon input {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .input-with-icon i {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .demo-users-box {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .user-profile {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .sidebar-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .card-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .view-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .toggle-switch input:checked + .toggle-slider {
+    background: var(--primary);
+}
+
+[data-theme="light"] .config-item {
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+[data-theme="light"] .tema-option {
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+[data-theme="light"] .tema-option.active {
+    border-color: var(--primary);
+    background: var(--primary)10;
+}
+
+[data-theme="light"] select option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+/* Botón de toggle de tema */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 140px; /* Más arriba para no interferir con scroll */
+    right: 20px;
+    width: 40px; /* Más pequeño */
+    height: 40px; /* Más pequeño */
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Icono más pequeño */
+    box-shadow: var(--shadow-lg);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 8px 32px rgba(0, 200, 83, 0.4);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+/* Solo mostrar en panel de usuario/admin (cuando está logueado) */
+#userPanel .theme-toggle-btn {
+    display: flex !important;
+}
+
+/* Ocultar en landing page y login */
+#landingPage .theme-toggle-btn,
+#loginScreen .theme-toggle-btn {
+    display: none !important;
+}
+
+/* Animación de cambio de tema */
+@keyframes themeChange {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+.theme-changing {
+    animation: themeChange 0.3s ease;
+}
+
+/* Ajustes para gráficos en tema claro */
+[data-theme="light"] canvas {
+    filter: brightness(0.95);
+}
+
+/* Ajustes para badges en tema claro */
+[data-theme="light"] .badge {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+/* Ajustes para tablas en tema claro */
+[data-theme="light"] table {
+    background: var(--bg-secondary);
+}
+
+[data-theme="light"] thead {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="light"] tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+/* Ajustes para el landing en tema claro */
+[data-theme="light"] .landing-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .landing-nav a {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .landing-nav a:hover {
+    color: var(--primary);
+}
+
+[data-theme="light"] .btn-nav-login {
+    background: var(--primary);
+    color: white;
+}
+
+[data-theme="light"] .hero-section {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 50%, #A5D6A7 100%);
+}
+
+[data-theme="light"] .hero-title {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .hero-subtitle {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .hero-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .hero-dashboard {
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .hero-kpi {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .hero-kpi-val,
+[data-theme="light"] .hero-kpi-lbl {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .hero-chart-area {
+    background: var(--bg-tertiary);
+}
+
+[data-theme="light"] .hero-bar {
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+}
+
+[data-theme="light"] .hero-float-badge {
+    background: white;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .counter-value {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .counter-label {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .feature-card-new {
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .feature-card-new:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary);
+}
+
+[data-theme="light"] .feature-icon-new {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .benefits-section {
+    background: var(--bg-primary);
+}
+
+[data-theme="light"] .benefit-card-large {
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .info-card {
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .tech-item {
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .device-frame {
+    background: white;
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="light"] .cta-section {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+
+[data-theme="light"] .landing-footer {
+    background: #1a2f45;
+    color: #ECEFF1;
+}
+
+[data-theme="light"] .landing-footer a {
+    color: #B0BEC5;
+}
+
+[data-theme="light"] .landing-footer a:hover {
+    color: var(--primary-light);
+}
+
+[data-theme="light"] .section-tag {
+    background: var(--primary)20;
+    color: var(--primary);
+    border: 1px solid var(--primary)40;
+}
+
+[data-theme="light"] .hero-particles .particle {
+    opacity: 0.6;
+}
+
+[data-theme="light"] .hero-grid-bg {
+    opacity: 0.3;
+}
+
+[data-theme="light"] .btn-hero-primary {
+    box-shadow: 0 4px 16px rgba(0, 200, 83, 0.3);
+}
+
+[data-theme="light"] .btn-hero-secondary {
+    background: white;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="light"] .btn-hero-secondary:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+}
+
+
+/* Ajustes adicionales para tema claro */
+[data-theme="light"] .kpi-icon {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .stat-card {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .badge {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .btn-icon {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .btn-icon:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+}
+
+[data-theme="light"] .scroll-to-top {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+    box-shadow: var(--shadow-md);
+}
+
+[data-theme="light"] .comparacion-card-pro {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .comp-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .comp-icon {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .comp-variation {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .comp-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .password-input-group input {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .btn-toggle-password {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .checkbox-container input:checked ~ .checkmark {
+    background: var(--primary);
+}
+
+[data-theme="light"] .page-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .feature-card-new {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .feature-icon-new {
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .benefit-card-large {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .info-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .tech-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .device-frame {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="light"] .hero-dashboard {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .hero-kpi {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .notif-item.leida {
+    opacity: 0.6;
+}
+
+[data-theme="light"] .nav-separator {
+    background: var(--border-color);
+}
+
+/* Mejorar contraste de texto en tema claro */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .kpi-value {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .kpi-label {
+    color: var(--text-secondary);
+}
+
+/* Ajustes para dropdowns y selects */
+[data-theme="light"] select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23546E7A' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
+/* Ajustes para checkboxes y radios */
+[data-theme="light"] input[type="checkbox"],
+[data-theme="light"] input[type="radio"] {
+    border: 2px solid var(--border-color);
+}
+
+[data-theme="light"] input[type="checkbox"]:checked,
+[data-theme="light"] input[type="radio"]:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Ajustes para botones secundarios */
+[data-theme="light"] .btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+}
+
+/* Ajustes para tabs */
+[data-theme="light"] .tabs {
+    border-bottom: 2px solid var(--border-color);
+}
+
+[data-theme="light"] .tab {
+    color: var(--text-secondary);
+    border-bottom: 2px solid transparent;
+}
+
+[data-theme="light"] .tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+[data-theme="light"] .tab:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+/* Ajustes para progress bars */
+[data-theme="light"] .progress-bar {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+/* Ajustes para tooltips */
+[data-theme="light"] .tooltip {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* Ajustes para código */
+[data-theme="light"] code,
+[data-theme="light"] pre {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Mejorar legibilidad de enlaces */
+[data-theme="light"] a {
+    color: var(--primary);
+}
+
+[data-theme="light"] a:hover {
+    color: var(--primary-dark);
+}
+
+/* Ajustes para el footer del landing */
+[data-theme="light"] .landing-footer {
+    background: #263238;
+    color: #ECEFF1;
+}
+
+[data-theme="light"] .landing-footer a {
+    color: #B0BEC5;
+}
+
+[data-theme="light"] .landing-footer a:hover {
+    color: var(--primary-light);
+}
+
+
+/* Ajustes para login screen en tema claro */
+[data-theme="light"] .login-background {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%);
+}
+
+[data-theme="light"] .login-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .logo-text {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .logo-subtitle {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .login-title h2 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .login-title p {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .demo-users-box {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .demo-users-title {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .demo-user-item {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .input-with-icon input {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .input-with-icon input:focus {
+    border-color: var(--primary);
+    background: var(--bg-secondary);
+}
+
+[data-theme="light"] .input-with-icon i {
+    color: var(--text-secondary);
+}
+
+[data-theme="light"] .checkbox-label {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .login-links a {
+    color: var(--primary);
+}
+
+[data-theme="light"] .login-links a:hover {
+    color: var(--primary-dark);
+}
+
+[data-theme="light"] .btn-volver-landing {
+    background: white;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .btn-volver-landing:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+}
+
+/* Asegurar que el botón de tema sea visible sobre el landing */
+.theme-toggle-btn {
+    pointer-events: auto;
+}
+
+/* Responsive para el botón de tema */
+@media (max-width: 768px) {
+    .theme-toggle-btn {
+        bottom: 120px; /* Ajustar en móvil también */
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
